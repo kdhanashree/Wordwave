@@ -12,10 +12,9 @@ app.use(cors({
     credentials:true,
 }));
 
-app.listen(port,(req,res)=>{
-    console.log(`Server listening on port :${port}`);
+app.get("/",(req,res)=>{
+    res.send(`Server is Working`);
 });
-
 app.post("/translate",async(req,res)=>{
     //console.log(`Request came to backend!!`);
     let {sourceLang , targetLang , text} = req.body;
@@ -31,6 +30,7 @@ app.post("/translate",async(req,res)=>{
     res.send({translatedText});
 });
 
-app.get("/",(req,res)=>{
-    res.send(`Server is Working`);
+app.listen(port,(req,res)=>{
+    console.log(`Server listening on port :${port}`);
 });
+
