@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use(cors({
-    origin:['http://localhost:5173','https://wordwave-fub9vfai3-dhanashrees-projects-fe31d3ec.vercel.app'],
+    origin:['https://word-wave-frontend.vercel.app','http://localhost:5173'],
     credentials:true,
 }));
 
