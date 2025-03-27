@@ -30,3 +30,7 @@ app.post("/translate",async(req,res)=>{
     console.log(`The response sent to frontend is:${translatedText}`);
     res.send({translatedText});
 });
+
+app.get("/",(req,res)=>{
+    res.send(`Server is Working`);
+});
